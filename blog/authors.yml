@@ -1,0 +1,9 @@
+tigmed:
+  name: Equipo Tigmed
+  title: Desarrolladores del Sistema de Citas Médicas
+  url: https://tigmed.com
+  image_url: https://via.placeholder.com/150/0066cc/ffffff?text=T
+  page: true
+  socials:
+    github: tigmed
+    linkedin: tigmed

@@ -1,0 +1,143 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Colores principales del sistema Tigmed */
+  --ifm-color-primary: #1087e8;
+  --ifm-color-primary-dark: #0d6fd1;
+  --ifm-color-primary-darker: #0c68c4;
+  --ifm-color-primary-darkest: #0a55a0;
+  --ifm-color-primary-light: #4da1ff;
+  --ifm-color-primary-lighter: #5da8ff;
+  --ifm-color-primary-lightest: #7db8ff;
+  
+  /* Colores secundarios */
+  --ifm-color-secondary: #38e8c6;
+  --ifm-color-secondary-dark: #2fd7b6;
+  --ifm-color-secondary-darker: #2ac9ab;
+  --ifm-color-secondary-darkest: #22a58c;
+  --ifm-color-secondary-light: #43cecf;
+  --ifm-color-secondary-lighter: #4dd1d2;
+  --ifm-color-secondary-lightest: #6dd8d9;
+  
+  /* Colores de acento */
+  --ifm-color-accent: #efab42;
+  --ifm-color-accent-dark: #e89a2e;
+  --ifm-color-accent-darker: #e59224;
+  --ifm-color-accent-darkest: #bc781d;
+  --ifm-color-accent-light: #f2b85a;
+  --ifm-color-accent-lighter: #f4be66;
+  --ifm-color-accent-lightest: #f7cc7f;
+  
+  /* Colores de fondo */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f5f7fa;
+  --ifm-background-secondary-color: #eef5fc;
+  
+  /* Colores de texto */
+  --ifm-color-text: #181c32;
+  --ifm-color-text-secondary: #224051;
+  --ifm-color-text-muted: #7e8299;
+  
+  /* Colores de bordes */
+  --ifm-border-color: #e4e6ef;
+  --ifm-border-color-light: #edeae9;
+  
+  /* Variables adicionales */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(16, 135, 232, 0.1);
+  
+  /* Colores personalizados del sistema Tigmed */
+  --tigmed-blue-primary: #1087e8;
+  --tigmed-blue-light: #4da1ff;
+  --tigmed-blue-dark: #001c2c40;
+  --tigmed-teal: #38e8c6;
+  --tigmed-orange: #efab42;
+  --tigmed-gray-light: #f5f7fa;
+  --tigmed-gray-blue: #abbed1;
+  --tigmed-text-dark: #181c32;
+  --tigmed-text-secondary: #224051;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4da1ff;
+  --ifm-color-primary-dark: #1087e8;
+  --ifm-color-primary-darker: #0d6fd1;
+  --ifm-color-primary-darkest: #0a55a0;
+  --ifm-color-primary-light: #7db8ff;
+  --ifm-color-primary-lighter: #8dbfff;
+  --ifm-color-primary-lightest: #add1ff;
+  
+  --ifm-color-secondary: #43cecf;
+  --ifm-color-secondary-dark: #38e8c6;
+  --ifm-color-secondary-darker: #2fd7b6;
+  --ifm-color-secondary-darkest: #22a58c;
+  --ifm-color-secondary-light: #6dd8d9;
+  --ifm-color-secondary-lighter: #7ddddd;
+  --ifm-color-secondary-lightest: #9de5e5;
+  
+  --ifm-color-accent: #f2b85a;
+  --ifm-color-accent-dark: #efab42;
+  --ifm-color-accent-darker: #e89a2e;
+  --ifm-color-accent-darkest: #bc781d;
+  --ifm-color-accent-light: #f7cc7f;
+  --ifm-color-accent-lighter: #f9d391;
+  --ifm-color-accent-lightest: #fbe0a8;
+  
+  --ifm-background-color: #001c2c40;
+  --ifm-background-surface-color: #0a1f2e;
+  --ifm-background-secondary-color: #0f2a3a;
+  
+  --ifm-color-text: #ffffff;
+  --ifm-color-text-secondary: #abbed1;
+  --ifm-color-text-muted: #c4c4c4;
+  
+  --ifm-border-color: #1a2f3f;
+  --ifm-border-color-light: #0f2a3a;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(77, 161, 255, 0.3);
+}
+
+/* Estilos personalizados para elementos del sistema Tigmed */
+.tigmed-header {
+  background-color: var(--tigmed-gray-light);
+  border-bottom: 1px solid var(--tigmed-gray-blue);
+}
+
+.tigmed-sidebar {
+  background-color: var(--tigmed-background-color);
+  border-right: 1px solid var(--tigmed-border-color);
+}
+
+.tigmed-button-primary {
+  background-color: var(--tigmed-blue-primary);
+  border-color: var(--tigmed-blue-primary);
+  color: white;
+}
+
+.tigmed-button-secondary {
+  background-color: white;
+  border-color: var(--tigmed-blue-primary);
+  color: var(--tigmed-blue-primary);
+}
+
+.tigmed-accent {
+  color: var(--tigmed-teal);
+}
+
+.tigmed-warning {
+  color: var(--tigmed-orange);
+}
+
+.tigmed-text-primary {
+  color: var(--tigmed-text-dark);
+}
+
+.tigmed-text-secondary {
+  color: var(--tigmed-text-secondary);
+}

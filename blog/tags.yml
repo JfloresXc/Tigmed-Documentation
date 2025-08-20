@@ -1,0 +1,29 @@
+tigmed:
+  label: Tigmed
+  permalink: /tigmed
+  description: Sistema Tigmed
+
+citas-medicas:
+  label: Citas Médicas
+  permalink: /citas-medicas
+  description: Todo sobre la gestión de citas médicas
+
+sistema:
+  label: Sistema
+  permalink: /sistema
+  description: Funcionalidades y características del sistema
+
+configuración:
+  label: Configuración
+  permalink: /configuracion
+  description: Configuración y personalización del sistema
+
+novedades:
+  label: Novedades
+  permalink: /novedades
+  description: Nuevas funcionalidades y actualizaciones
+
+bienvenida:
+  label: Bienvenida
+  permalink: /bienvenida
+  description: Introducción y bienvenida al sistema

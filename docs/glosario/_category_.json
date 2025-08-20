@@ -1,0 +1,8 @@
+{
+  "label": "Glosario",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Definiciones y conceptos importantes del sistema Tigmed de gestión de citas médicas."
+  }
+}
