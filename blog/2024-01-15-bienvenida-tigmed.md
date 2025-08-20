@@ -91,9 +91,7 @@ Estamos comprometidos con:
 ¿Listo para transformar la gestión de citas en tu institución? 
 
 1. **Explora** nuestra [documentación completa](/docs/intro)
-2. **Configura** tu sistema siguiendo nuestros [primeros pasos](/docs/configuracion/primeros-pasos)
-3. **Aprende** sobre la [gestión de citas](/docs/gestion-citas/introduccion)
-4. **Consulta** nuestro [glosario](/docs/glosario/cita-medica) cuando tengas dudas
+2. **Consulta** nuestro [glosario](/docs/glosario/cita-medica) cuando tengas dudas
 
 ## Mantente Conectado
 

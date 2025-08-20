@@ -89,8 +89,6 @@ Nuestro sistema está construido con tecnologías de vanguardia que garantizan:
 
 Explora nuestra documentación para conocer más sobre:
 - [Admisión y Citas](./admision-citas/introduccion)
-- [Módulo de Caja](./caja/introduccion)
-- [Configuración del Sistema](./configuracion/primeros-pasos)
 - [Glosario de Términos](./glosario/cita-medica)
 
 ---
