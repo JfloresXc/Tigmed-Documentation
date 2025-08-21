@@ -22,37 +22,88 @@ Este submódulo cubre la gestión y mantenimiento de las configuraciones que vin
 
 ## 4. Historias de Usuario
 
-### Historia 1: Creación de configuración de asignación
-
+### HU-001: Creación de Configuración de Asignación
 - **Descripción:** Como usuario administrador, quiero crear una configuración que asigne automáticamente un médico o empresa a una tarifa específica para optimizar la carga de procedimientos.
-- **Criterios de Aceptación:** El sistema debe permitir ingresar todos los datos obligatorios en el modal, validar su formato y almacenar correctamente la configuración.
-- **Restricciones y validaciones:** Todos los campos de la configuración son obligatorios, se debe validar que la tarifa, médico y empresa existan y no se dupliquen configuraciones para la misma tarifa.
-- **Integraciones:** Interacción con la base de datos para guardar la configuración y futuras consultas desde las vistas Procedimientos Varios, Procedimientos Programados y Agregar Orden.
-- **Gestión de errores y mensajes:** Mostrar mensajes claros en caso de campos incompletos, duplicados o errores en la validación.
+- **Criterios de Aceptación:** 
+  - Modal con campos obligatorios completos.
+  - Validación de formato en todos los campos.
+  - Almacenamiento correcto en base de datos.
+  - Cierre automático del modal tras guardar.
+- **Restricciones y validaciones:** 
+  - Todos los campos son obligatorios.
+  - Validar existencia de tarifa, médico y empresa.
+  - Prevenir duplicados para la misma tarifa.
+- **Integraciones:** Interacción directa con base de datos para guardar configuración.
+- **Gestión de errores y mensajes:** Mensajes claros para campos incompletos, duplicados o errores de validación.
 
-### Historia 2: Edición de configuración existente
-
+### HU-002: Edición de Configuración Existente
 - **Descripción:** Como usuario, quiero modificar una configuración existente a través de un modal para corregir o actualizar la asignación de médicos o empresas a tarifas.
-- **Criterios de Aceptación:** El sistema debe cargar la configuración seleccionada en el modal, permitir cambios vigentes y actualizar la base de datos correctamente.
-- **Restricciones y validaciones:** Mantener la obligatoriedad y validaciones al editar, evitar duplicados o inconsistencias después de la modificación.
-- **Integraciones:** Actualización en la base de datos y reflejo inmediato en las asignaciones automáticas.
-- **Gestión de errores y mensajes:** Notificar al usuario en caso de datos inválidos o problemas en la actualización.
+- **Criterios de Aceptación:** 
+  - Carga automática de datos en modal de edición.
+  - Modificación de campos vigentes.
+  - Actualización correcta en base de datos.
+  - Reflejo inmediato de cambios.
+- **Restricciones y validaciones:** 
+  - Mantener obligatoriedad de campos.
+  - Validar integridad tras modificación.
+  - Prevenir duplicados o inconsistencias.
+- **Integraciones:** Actualización en base de datos y reflejo en asignaciones automáticas.
+- **Gestión de errores y mensajes:** Notificación de datos inválidos o problemas en actualización.
 
-### Historia 3: Eliminación de configuración
-
+### HU-003: Eliminación de Configuración
 - **Descripción:** Como usuario administrador, quiero eliminar configuraciones obsoletas para mantener actualizada la base de asignaciones y evitar asignaciones erróneas.
-- **Criterios de Aceptación:** Confirmación previa a la eliminación y correcta eliminación de la configuración de la base.
-- **Restricciones y validaciones:** Confirmación obligatoria para evitar eliminaciones accidentales.
-- **Integraciones:** Impacto reflejado al dejar de aplicar la configuración eliminada en las vistas relacionadas.
+- **Criterios de Aceptación:** 
+  - Confirmación previa obligatoria.
+  - Eliminación correcta de la base de datos.
+  - Actualización inmediata de la interfaz.
+  - Cese de aplicación de configuración eliminada.
+- **Restricciones y validaciones:** 
+  - Confirmación obligatoria para evitar eliminaciones accidentales.
+  - Validar que la eliminación no afecte configuraciones activas.
+- **Integraciones:** Impacto reflejado al dejar de aplicar la configuración en vistas relacionadas.
 - **Gestión de errores y mensajes:** Confirmación antes de eliminar y mensajes de éxito o error post eliminación.
 
-### Historia 4: Asignación automática en vistas de procedimientos y órdenes
-
+### HU-004: Asignación Automática en Vistas de Procedimientos y Órdenes
 - **Descripción:** Como usuario, al agregar una tarifa en Procedimientos Varios, Procedimientos Programados o Agregar Orden, el sistema debe asignar automáticamente el médico o empresa configurada para dicha tarifa.
-- **Criterios de Aceptación:** La asignación se realiza inmediatamente sin intervención manual, reflejando correctamente la configuración existente.
-- **Restricciones y validaciones:** El sistema solo asigna si existe configuración; en caso contrario, no realiza asignación automática.
-- **Integraciones:** Consulta en tiempo real a la base de datos desde las vistas mencionadas para obtener la configuración.
-- **Gestión de errores y mensajes:** Notificar si no hay configuración disponible para una tarifa agregada, con mensaje claro para el usuario.
+- **Criterios de Aceptación:** 
+  - Asignación inmediata sin intervención manual.
+  - Reflejo correcto de la configuración existente.
+  - Funcionamiento en todas las vistas mencionadas.
+  - Respuesta en tiempo real.
+- **Restricciones y validaciones:** 
+  - Solo asignar si existe configuración.
+  - No realizar asignación automática si no hay configuración.
+  - Validar integridad de datos asignados.
+- **Integraciones:** Consulta en tiempo real a base de datos desde las vistas mencionadas.
+- **Gestión de errores y mensajes:** Notificar si no hay configuración disponible, con mensaje claro para el usuario.
+
+### HU-005: Validación y Control de Integridad
+- **Descripción:** Como sistema, debo validar la integridad de las configuraciones para garantizar que las asignaciones automáticas sean consistentes y confiables.
+- **Criterios de Aceptación:** 
+  - Validación de campos obligatorios en tiempo real.
+  - Prevención de configuraciones duplicadas.
+  - Verificación de existencia de entidades relacionadas.
+  - Control de consistencia de datos.
+- **Restricciones y validaciones:** 
+  - Validación inmediata al ingresar datos.
+  - Bloqueo de guardado si hay errores.
+  - Verificación de integridad referencial.
+- **Integraciones:** Validación contra base de datos y reglas de negocio.
+- **Gestión de errores y mensajes:** Mensajes específicos para cada tipo de error de validación.
+
+### HU-006: Gestión de Modal y Experiencia de Usuario
+- **Descripción:** Como usuario, quiero una experiencia fluida en el modal de configuración que me permita gestionar eficientemente las asignaciones médico/empresa-tarifa.
+- **Criterios de Aceptación:** 
+  - Apertura y cierre fluido del modal.
+  - Navegación intuitiva entre campos.
+  - Feedback visual inmediato de acciones.
+  - Persistencia de datos en caso de error.
+- **Restricciones y validaciones:** 
+  - Modal responsivo y accesible.
+  - Manejo correcto de estados de carga.
+  - Prevención de pérdida de datos.
+- **Integraciones:** Interacción con interfaz de usuario y sistema de notificaciones.
+- **Gestión de errores y mensajes:** Indicadores visuales de estado, mensajes de confirmación y manejo de errores de red.
 
 ## 5. Flujos de trabajo / Casos de uso
 
