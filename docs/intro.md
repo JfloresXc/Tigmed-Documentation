@@ -29,7 +29,7 @@ Módulo integral que combina la gestión de admisiones hospitalarias y citas mé
 - Gestión de staff médico
 - Seguimiento completo de casos
 
-### 💰 Caja
+### 💰 Caja -----------------
 Centro financiero para todas las operaciones monetarias:
 - Procesamiento de pagos y cobros
 - Gestión de autorizaciones de seguros
